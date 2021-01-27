@@ -1,0 +1,154 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,800);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,700);
+*{
+  box-sizing:border-box;
+}
+
+ figure{
+  width:270px;
+  height:360px;
+  border:5px solid;
+}
+
+
+figure{
+  background: ;
+  color: #fff;
+  backface-visibility: hidden;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+}
+
+
+
+figure img{
+  position: relative;
+  display: block;
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:auto;
+  width:290px;
+}
+
+
+figure .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  padding: 2em;
+  backface-visibility: hidden;
+}
+
+.front .caption{
+  font-size: 1.25em;
+}
+
+.front .caption:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+  content: '';
+  opacity: 0;
+  transform: translate3d(0,0,0);
+  transition: opacity 0.35s, transform 0.35s;
+
+}
+
+.front:hover .caption:before{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+.front h2{
+  word-spacing: -0.15em;
+  font-weight: 300;
+  font-size: 1em;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  color: #272833;
+  transition: transform 0.35s, color 0.35s;
+  transform: translate3d(0,600%,0);
+  background-color:#fff;
+  
+}
+
+.front h2 span {
+  font-weight: bold;
+}
+
+.front h2:after{
+  position: absolute;
+  bottom: -10px;
+  left: 70px;
+  right: 70px;
+  height: 2px;
+  background: #fff;
+  content: '';
+  transition: transform 0.35s;
+  transform: translate3d(0,0,0);
+  
+}
+
+.front:hover h2 {
+  color: #fff;
+  background-color: #000;
+  -webkit-transform: translate3d(0,-50%,0) translate3d(0,60px,0);
+  transform: translate3d(0,-50%,0) translate3d(0,60px,0);
+ 
+}
+
+.front:hover h2:after {
+  transform: translate3d(0,0,0);
+}
+
+.front p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2em;
+  width: 100%;
+  opacity: 0;
+  transform: translate3d(0,20px,0);
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.front:hover p {
+
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+
+.front h1{
+  position: absolute;
+  bottom:0;
+  margin-left:55px;
+  opacity: 0;
+  font-size: 68%;
+  font-weight: 300;
+  transform: translate3d(0,10px,0);
+  transition: opacity 0.35s, transform 0.35s;
+}
+.front:hover h1{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
